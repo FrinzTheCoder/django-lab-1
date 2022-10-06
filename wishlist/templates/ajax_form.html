@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Pembuatan Wishlist Baru</title>
+{% endblock meta %}
+
+{% block content %}
+
+<div class="mt-5 col-md-8 mx-auto container">
+    <h1 class="text-gray mb-5">Wishlist Baru</h1>  
+    <form method="POST" action="">
+        {% csrf_token %}
+        <table class="table table-striped table-bordered table-hover">
+            <tr>
+                <td class="fw-bold">Username: </td>
+                <td><input type="text" name="username" placeholder="Username"></td>
+            </tr>
+                    
+            <tr>
+                <td class="fw-bold">Password: </td>
+                <td><input type="password" name="password" placeholder="Password"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Login" class="btn btn-primary"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+{% endblock content %}
